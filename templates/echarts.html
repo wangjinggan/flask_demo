@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+</head>
+<body>
+<div style="width: 600px;height: 400px"></div>
+<script>
+    var mCharts = echarts.init(document.querySelector("div"))
+    var xData = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+    var yData = [3000, 2800, 900, 1000, 800, 700, 1400, 1300, 900, 1000, 800, 600]
+    var option = {
+        xAxis:{
+            type:'category',
+            data:xData
+        },
+        yAxis:{
+            type:'value'
+        },
+        series:[
+            {
+                type:'line',
+                data:yData,
+                label:{show:true,rotate:0}
+            }
+        ]
+    }
+    mCharts.setOption(option)
+</script>
+</body>
+</html>

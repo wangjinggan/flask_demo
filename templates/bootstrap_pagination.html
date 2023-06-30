@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% from 'bootstrap4/pagination.html' import render_pager, render_pagination %}
+
+{% block content %}
+    {% include'bootstrap_table.html' %}
+    {{ render_pagination(pagination) }}
+{% endblock %}
